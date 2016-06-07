@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp">
 
@@ -33,26 +33,33 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dip"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:padding="5dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="2dp"
                 android:text="Ten Largest files" />
 
             <ListView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="170dip"
                 android:layout_gravity="center_horizontal"
+                android:divider="#000000"
+                android:layout_weight="1"
+                android:dividerHeight="2dip"
                 android:background="#D3D3D3" />
 
             <TextView
@@ -89,12 +96,16 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="3dp"
                 android:text="Most frequent file extensions" />
 
             <ListView
                 android:id="@+id/listView2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dip"
+                android:layout_weight="1"
+                android:divider="#000000"
+                android:dividerHeight="2dip"
                 android:background="#D3D3D3" />
 
 
@@ -102,6 +113,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="3dp"
                 android:text="Average files Size: " />
 
             <TextView

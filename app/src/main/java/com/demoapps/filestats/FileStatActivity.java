@@ -124,9 +124,9 @@ public class FileStatActivity extends AppCompatActivity implements TaskFragment.
                 if ( mLargeFilesMap != null && mFrequentFilesMap != null && mLargeFilesMap.size() > 0
                         && mFrequentFilesMap.size() > 0) {
                     setProgressVisibility(false);
-                    ArrayAdapter adapter1 = new FileListAdapter(this, android.R.layout.simple_list_item_2, new ArrayList(mLargeFilesMap.entrySet()));
+                    ArrayAdapter adapter1 = new FileListAdapter(this, android.R.layout.simple_list_item_2, new ArrayList(mLargeFilesMap.entrySet()),true);
                     filesMappvigView.setAdapter(adapter1);
-                    ArrayAdapter adapter2 = new FileListAdapter(this, android.R.layout.simple_list_item_2, new ArrayList(mFrequentFilesMap.entrySet()));
+                    ArrayAdapter adapter2 = new FileListAdapter(this, android.R.layout.simple_list_item_2, new ArrayList(mFrequentFilesMap.entrySet()),false);
                     freqFilesView.setAdapter(adapter2);
                     medianCountView.setText(readableFileSize(mMedianCount));
                     makeResultVisible();
@@ -276,9 +276,9 @@ public class FileStatActivity extends AppCompatActivity implements TaskFragment.
         mFrequentFilesMap = (HashMap) freqfiles;
         mMedianCount = median;
 
-        ArrayAdapter adapter1 = new FileListAdapter(this, android.R.layout.simple_list_item_2, new ArrayList(files.entrySet()));
+        ArrayAdapter adapter1 = new FileListAdapter(this, android.R.layout.simple_list_item_2, new ArrayList(files.entrySet()),true);
         filesMappvigView.setAdapter(adapter1);
-        ArrayAdapter adapter2 = new FileListAdapter(this, android.R.layout.simple_list_item_2, new ArrayList(freqfiles.entrySet()));
+        ArrayAdapter adapter2 = new FileListAdapter(this, android.R.layout.simple_list_item_2, new ArrayList(freqfiles.entrySet()),false);
         freqFilesView.setAdapter(adapter2);
         medianCountView.setText(readableFileSize(median));
         makeResultVisible();

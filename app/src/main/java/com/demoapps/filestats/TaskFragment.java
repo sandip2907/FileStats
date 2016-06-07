@@ -28,7 +28,7 @@ public class TaskFragment extends Fragment {
     private static final String TAG = TaskFragment.class.getSimpleName();
     private static final boolean DEBUG = true; // Set this to false to disable logs.
     private static String SD_CARD_PATH = Environment.getExternalStorageDirectory().getAbsolutePath();
-    ;
+
     private Map<String, Long> filesMapping;
     private Map<String, Long> freqfiles;
     private long medianCount;
